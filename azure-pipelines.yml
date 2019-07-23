@@ -1,0 +1,30 @@
+jobs:
+- job: Windows
+  pool:
+    vmImage: VS2017-Win2016
+  steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(node_version)
+      displayName: Install Node.js
+    - script: yarn
+
+- job: Linux
+  pool:
+    vmImage: 'Ubuntu-16.04'
+  steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(node_version)
+      displayName: Install Node.js
+    - script: yarn
+
+- job: macOS
+  pool:
+    vmImage: macOS 10.13
+  steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(node_version)
+      displayName: Install Node.js
+    - script: yarn
