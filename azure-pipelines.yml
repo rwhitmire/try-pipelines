@@ -2,6 +2,14 @@ jobs:
 - job: Windows
   pool:
     vmImage: VS2017-Win2016
+  strategy:
+    matrix:
+      node_8.x:
+        node_version: 8.x
+      node_10.x:
+        node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
     - task: NodeTool@0
       inputs:
@@ -12,6 +20,14 @@ jobs:
 - job: Linux
   pool:
     vmImage: 'Ubuntu-16.04'
+  strategy:
+    matrix:
+      node_8.x:
+        node_version: 8.x
+      node_10.x:
+        node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
     - task: NodeTool@0
       inputs:
@@ -22,6 +38,14 @@ jobs:
 - job: macOS
   pool:
     vmImage: macOS 10.13
+  strategy:
+    matrix:
+      node_8.x:
+        node_version: 8.x
+      node_10.x:
+        node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
     - task: NodeTool@0
       inputs:
