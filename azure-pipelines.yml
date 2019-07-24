@@ -8,16 +8,9 @@ jobs:
         versionSpec: 10.16.0
       displayName: Install Node.js
     - script: yarn
-
-- job: Linux
-  pool:
-    vmImage: 'Ubuntu-16.04'
-  steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: 10.16.0
-      displayName: Install Node.js
-    - script: yarn
+      displayName: Yarn Install
+    - script: yarn dist --win
+      displayName: Yarn Dist
 
 - job: macOS
   pool:
@@ -28,3 +21,6 @@ jobs:
         versionSpec: 10.16.0
       displayName: Install Node.js
     - script: yarn
+      displayName: Yarn Install
+    - script: yarn dist --win
+      displayName: Yarn Dist
