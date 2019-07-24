@@ -9,7 +9,7 @@ jobs:
       displayName: Install Node.js
     - script: yarn
       displayName: Yarn Install
-    - script: yarn dist --win
+    - script: yarn dist:win
       displayName: Yarn Dist
 
 - job: macOS
@@ -22,5 +22,5 @@ jobs:
       displayName: Install Node.js
     - script: yarn
       displayName: Yarn Install
-    - script: yarn dist --mac
+    - script: yarn dist:mac
       displayName: Yarn Dist
