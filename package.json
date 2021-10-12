@@ -26,7 +26,7 @@
     "@types/react-dom": "^16.8.5",
     "copy": "^0.3.2",
     "cross-env": "^5.2.0",
-    "electron": "^5.0.7",
+    "electron": "^11.5.0",
     "electron-builder": "^22.2.0",
     "electron-notarize": "^0.2.1",
     "tslint": "^5.18.0",
